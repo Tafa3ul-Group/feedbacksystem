@@ -118,9 +118,13 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  url: {
+    type: String,
+    required: true,
+  },
 });
 
-const pb = new PocketBase(props.token);
+const pb = new PocketBase(props.url);
 
 const emojiOptions = [
   { value: 2, label: "😃", desc: "Very helpful" },
@@ -150,7 +154,7 @@ async function submit() {
     comment: feedback.value,
     browser: navigator.userAgent,
     device: navigator.platform,
-    product: "izdgvr1rzw65qmn",
+    product: props.token,
     type: props.type,
   };
   if (props.type === "like_dislike") {
