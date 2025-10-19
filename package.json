@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-feedback-layer",
+  "name": "feedback-layer",
   "version": "1.0.0",
   "description": "A Nuxt layer providing feedback widget components and functionality",
   "private": false,

@@ -4,8 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', 'motion-v/nuxt'],
   
-  // Layer configuration
-  extends: [],
   
   // Export components globally for consuming projects
   components: [
