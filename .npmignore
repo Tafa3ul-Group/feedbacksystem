@@ -1,0 +1,35 @@
+# Development files
+.env*
+.env.example
+*.log
+.DS_Store
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+.nuxt/
+.output/
+dist/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+*.tgz
+*.tar.gz

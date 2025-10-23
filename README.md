@@ -1,6 +1,6 @@
-# Nuxt Feedback Layer
+# @tafa3ul/feedback-layer
 
-A Nuxt layer that provides feedback widget components and functionality for collecting user feedback in your Nuxt applications.
+A beautiful Nuxt layer that provides modern feedback widget components with Arabic support, smooth animations, and PocketBase integration for collecting user feedback in your Nuxt applications.
 
 ## Features
 
@@ -18,18 +18,18 @@ A Nuxt layer that provides feedback widget components and functionality for coll
 1. Install the layer as a dependency:
 
 ```bash
-npm install nuxt-feedback-layer
+npm install @tafa3ul/feedback-layer
 # or
-pnpm add nuxt-feedback-layer
+pnpm add @tafa3ul/feedback-layer
 # or
-yarn add nuxt-feedback-layer
+yarn add @tafa3ul/feedback-layer
 ```
 
 2. Add the layer to your `nuxt.config.ts`:
 
 ```typescript
 export default defineNuxtConfig({
-  extends: ['nuxt-feedback-layer']
+  extends: ['@tafa3ul/feedback-layer']
 })
 ```
 

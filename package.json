@@ -1,7 +1,7 @@
 {
-  "name": "feedback-layer",
+  "name": "@tafa3ul/feedback-layer",
   "version": "1.0.0",
-  "description": "A Nuxt layer providing feedback widget components and functionality",
+  "description": "A beautiful Nuxt layer providing feedback widget components with modern UI and animations",
   "private": false,
   "type": "module",
   "main": "./nuxt.config.ts",
@@ -10,8 +10,22 @@
     "nuxt-layer",
     "feedback",
     "widget",
-    "vue"
+    "vue",
+    "tailwindcss",
+    "pocketbase",
+    "arabic",
+    "ui"
   ],
+  "author": "Tafa3ul Group",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tafa3ul-Group/feedbacksystem.git"
+  },
+  "homepage": "https://github.com/Tafa3ul-Group/feedbacksystem#readme",
+  "bugs": {
+    "url": "https://github.com/Tafa3ul-Group/feedbacksystem/issues"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --dotenv .env.example",
