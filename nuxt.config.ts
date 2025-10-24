@@ -2,8 +2,18 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', 'motion-v/nuxt'],
+  modules: [],
   
+  app: {
+    head: {
+      script: [
+        {
+          src: 'https://cdn.tailwindcss.com',
+          tagPosition: 'head'
+        }
+      ]
+    }
+  },
   
   // Export components globally for consuming projects
   components: [
