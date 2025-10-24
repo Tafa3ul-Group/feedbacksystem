@@ -14,17 +14,5 @@ export default defineNuxtConfig({
       ]
     }
   },
-  
-  // Export components globally for consuming projects
-  components: [
-    {
-      path: '~/components',
-      global: true
-    }
-  ],
 
-  // Auto-import composables
-  imports: {
-    dirs: ['composables']
-  }
 })

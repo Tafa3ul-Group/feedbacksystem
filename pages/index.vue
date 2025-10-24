@@ -96,7 +96,7 @@
     </div>
 
     <!-- Demo Widget -->
-    <FeedbackWidget :token="token" :url="url" />
+    <FeedbackWidget :token="token" :url="url" type="like_dislike" />
   </div>
 </template>
 
