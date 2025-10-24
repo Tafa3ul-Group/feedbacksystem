@@ -9,7 +9,18 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-  
-  
 
+  // Export components globally for consuming projects
+  components: [
+    {
+      path: '~/components',
+      global: true,
+      pathPrefix: false
+    }
+  ],
+
+  // Auto-import composables
+  imports: {
+    dirs: ['composables']
+  }
 })
