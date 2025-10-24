@@ -1,18 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  modules: [],
-  
-  app: {
-    head: {
-      script: [
-        {
-          src: 'https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4',
-          tagPosition: 'head'
-        }
-      ]
-    }
+  css: ['~/assets/css/main.css'],
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
   },
+  
+  
 
 })
