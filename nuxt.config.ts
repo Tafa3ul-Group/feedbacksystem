@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     head: {
       script: [
         {
-          src: 'https://cdn.tailwindcss.com',
+          src: 'https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4',
           tagPosition: 'head'
         }
       ]
