@@ -1,30 +1,30 @@
 <template>
   <div ref="iconRef"
-    class="fixed z-50 w-12 h-20 bg-gray-800 dark:bg-gray-900 rounded-t-lg rounded-b-lg flex flex-col items-center justify-between py-2 cursor-pointer select-none transition-all duration-300 group bottom-4 right-4"
+    class="fixed z-50 w-12 h-20 bg-secondary rounded-t-lg rounded-b-lg flex flex-col items-center justify-between py-2 cursor-pointer select-none transition-all duration-300 group bottom-4 right-4"
     :class="{
-      'hover:bg-gray-700 dark:hover:bg-gray-800 hover:scale-105': !isActive,
-      'bg-gray-700 dark:bg-gray-800 scale-105': isActive,
+      'hover:bg-secondary/80 hover:scale-105': !isActive,
+      'bg-secondary/80 scale-105': isActive,
       'shadow-lg hover:shadow-xl': !isActive,
       'shadow-xl': isActive
     }" @click="handleClick" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave" role="button"
     :aria-label="'فتح نافذة التعليقات'" tabindex="0" @keydown.enter="handleClick" @keydown.space.prevent="handleClick">
-      <div class="flex items-center justify-center">
-        <svg width="20" height="30" viewBox="0 0 191 176" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M141.306 175.444H92.5374L141.306 0H190.075L141.306 175.444Z" fill="#23AD6D" />
+      <div class="flex items-center justify-center text-primary">
+        <svg width="20" height="30" viewBox="0 0 191 176" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary">
+          <path d="M141.306 175.444H92.5374L141.306 0H190.075L141.306 175.444Z" fill="currentColor" />
           <path
             d="M61.5 114.5C52.069 105.069 44 88 44 88C44 88 35.931 105.069 26.5 114.5C17.069 123.931 0 132 0 132C0 132 17.069 140.069 26.5 149.5C35.931 158.931 44 176 44 176C44 176 52.069 158.931 61.5 149.5C70.931 140.069 88 132 88 132C88 132 70.931 123.931 61.5 114.5Z"
-            fill="#23AD6D" />
+            fill="currentColor" />
         </svg>
       </div>
       
       <!-- خط فاصل -->
-      <div class="w-6 h-px bg-gray-600 dark:bg-gray-400 opacity-50"></div>
+      <div class="w-6 h-px bg-border opacity-50"></div>
 
       <div class="flex items-center justify-center">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-        class="text-white/70 transition-colors duration-200" :class="{
-          'group-hover:text-white': !isActive,
-          'text-white': isActive
+        class="text-secondary-foreground/70 transition-colors duration-200" :class="{
+          'group-hover:text-secondary-foreground': !isActive,
+          'text-secondary-foreground': isActive
         }" aria-hidden="true">
         <!-- Speech Bubble Icon -->
         <path
@@ -35,7 +35,7 @@
     </div>
 
     <!-- Active State Indicator (Left Border) -->
-    <div v-if="isActive" class="absolute left-0 top-0 bottom-0 w-0.5 bg-green-400 rounded-l-lg"></div>
+    <div v-if="isActive" class="absolute left-0 top-0 bottom-0 w-0.5 bg-primary rounded-l-lg"></div>
   </div>
 </template>
 

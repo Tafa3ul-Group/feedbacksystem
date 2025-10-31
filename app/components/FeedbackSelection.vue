@@ -2,10 +2,10 @@
   <div class="space-y-6">
     <!-- Title Section -->
     <div class="text-center">
-      <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+      <h3 class="text-lg font-semibold text-foreground mb-2">
         هل كانت هذه الصفحة مفيدة؟
       </h3>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
+      <p class="text-sm text-muted-foreground">
         تقييمك يساعدنا على تحسين تجربتك
       </p>
     </div>
@@ -19,24 +19,24 @@
     >
       <button
         @click="$emit('select', 'like')"
-        class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-green-50 dark:hover:bg-green-900/20 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+        class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-primary/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
         aria-label="إعجاب - هذه الصفحة مفيدة"
       >
-        <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center group-hover:bg-green-200 dark:group-hover:bg-green-900/50 transition-colors">
+        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors">
           <span class="text-2xl group-hover:animate-bounce" role="img" aria-label="إبهام لأعلى">👍</span>
         </div>
-        <div class="text-sm font-medium text-gray-700 dark:text-gray-300">مفيد</div>
+        <div class="text-sm font-medium text-foreground">مفيد</div>
       </button>
       
       <button
         @click="$emit('select', 'dislike')"
-        class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-red-50 dark:hover:bg-red-900/20 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+        class="group flex flex-col items-center gap-3 p-4 rounded-xl hover:bg-destructive/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
         aria-label="عدم إعجاب - هذه الصفحة غير مفيدة"
       >
-        <div class="w-12 h-12 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center group-hover:bg-red-200 dark:group-hover:bg-red-900/50 transition-colors">
+        <div class="w-12 h-12 bg-destructive/20 rounded-full flex items-center justify-center group-hover:bg-destructive/30 transition-colors">
           <span class="text-2xl group-hover:animate-bounce" role="img" aria-label="إبهام لأسفل">👎</span>
         </div>
-        <div class="text-sm font-medium text-gray-700 dark:text-gray-300">غير مفيد</div>
+        <div class="text-sm font-medium text-foreground">غير مفيد</div>
       </button>
     </div>
     
@@ -51,11 +51,11 @@
         v-for="emoji in emojiOptions"
         :key="emoji.value"
         @click="$emit('selectEmoji', emoji)"
-        class="group flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+        class="group flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-muted transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
         :aria-label="emoji.desc"
       >
         <div class="text-2xl group-hover:animate-pulse">{{ emoji.label }}</div>
-        <div class="text-xs text-gray-500 dark:text-gray-400 font-medium text-center">{{ emoji.desc }}</div>
+        <div class="text-xs text-muted-foreground font-medium text-center">{{ emoji.desc }}</div>
       </button>
     </div>
   </div>
